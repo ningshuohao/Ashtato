@@ -1,14 +1,11 @@
 #include <iostream>
 #include <string>
-#ifndef _ASHTO_SYSTEM
-#define _ASHTO_SYSTEM
 namespace publiccode {
 	class var{
 		public:
-		std::string add(std::striing VarType,std::string VarName,std::string VarValue){
+		void add(std::striing VarType,std::string VarName,std::string VarValue){
 			if (VarType == ""){
 				consle.out("IndexError:Type is NULL.","\n")
-				return "error";
 			};
 		};
 	};
