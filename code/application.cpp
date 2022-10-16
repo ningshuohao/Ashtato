@@ -42,7 +42,7 @@ int main(){
         toFile.open("in.ato",ios::in);
         string getFile;
         toFile >> getFile;
-        StringSplit(getFile,"\n");
+        StringSplit(getFile,"\n",2);
         toFile.close();
     };
 };
