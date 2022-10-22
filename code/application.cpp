@@ -57,7 +57,9 @@ int main(){
         toFile.open("in.ato",ios::in);
         string getFile;
         toFile >> getFile;
-        StringSplit(getFile,"\n",2);
+        char* chartemp = (char*)getFile.c_str();
+        int inttemp = strlen(chartemp);
+        StringSplit(getFile,"\n",1);
         toFile.close();
     };
 };
