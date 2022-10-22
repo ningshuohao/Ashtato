@@ -59,7 +59,7 @@ int main(){
         toFile >> getFile;
         char* chartemp = (char*)getFile.c_str();
         int inttemp = strlen(chartemp);
-        StringSplit(getFile,"\n",1);
+        StringSplit(getFile,"\r",1);
         toFile.close();
     };
 };
