@@ -2,8 +2,22 @@
 #include <string>
 #include <cstring>
 #include <fstream>
-// #include "./class/sys.h"
 using namespace std;
+
+class consle{
+    void out(const char* outStr){
+        cout << outStr;
+    };
+    void in(char* VarName){
+        string inputStr;
+        cin >> inputStr;
+    };
+};
+class var{
+
+};
+class time{};
+
 //此函数用strtok方法，
 string StringSplit(string TODO,string SPLITSTR,int TODOCHARNUM){
     //获得Char型的被分隔值
@@ -13,7 +27,7 @@ string StringSplit(string TODO,string SPLITSTR,int TODOCHARNUM){
     //隔出后的暂存点
     char* token;
     int tokenCharNum;
-    //分割    @1 18line    @2 21line
+    //分割
     //第一个
     token = strtok(toDoChar,splitStrChar);
     //剩下的
@@ -30,9 +44,10 @@ int main(){
     cin >> appMode;
     if (appMode == (char*)"2"){
         string inputStr;
+        size_t sizes;
         for (;;){
             cout << ">>>";
-            cin >> inputStr;
+            getline(cin,inputStr);
             if (inputStr == "exit"){
                 break;
             };
