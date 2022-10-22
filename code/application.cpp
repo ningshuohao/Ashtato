@@ -8,14 +8,69 @@ class consle{
     void out(const char* outStr){
         cout << outStr;
     };
-    void in(char* VarName){
+    void in(string VarName){
         string inputStr;
         cin >> inputStr;
     };
 };
-class var{
 
+class var{
+    public:
+    int VarNum = 0;
+    string +listed[128];
+    void addVar(string VarName,string VarValue){
+        listed[VarNum] = {"str",VarName,string(VarValue)};
+        VarNum++;
+    };  
+    void addVar(string VarName,int VarValue){
+        listed[VarNum] = {"int",VarName,string(VarValue)};
+        VarNum++;
+    };
+    void addVar(string VarName,float VarValue){
+        listed[VarNum] = {"flo",VarName,string(VarValue)};
+        VarNum++;
+    };
+    void addVar(string VarName,bool VarValue){
+        listed[VarNum] = {"bol",VarName,string(VarValue)};
+        VarNum++;
+    };
+    void removeVar(string VarName){
+        string TempValue[3];
+        bool NowType = false;
+        for (int nowNum = 0;nowNum < VarNum;nowNum++){
+            TempValue = listed[nowNum];
+            if (TempValue[1] == VarName){
+                listed[nowNum] = NULL;
+                VarNum--;
+                NowType = true;
+                break;
+            };
+        };
+        if (NowType == false){
+            cout << "IndexERROR:The Variables is not index to remove."
+        };
+    };
+    string getVar(string VarName){
+        string TempValue[3];
+        bool NowType = false;
+        for (int nowNum = 0;nowNum < VarNum;nowNum++){
+            TempValue = listed[nowNum];
+            if (TempValue[1] == VarName){
+                return TempValue[1];
+            };
+        };
+        if (NowType == false){
+            cout << "IndexERROR:The Variables is not index to get."
+            return NULL;
+            
+        };
+    };
+    void setVar(string VarName,string VarValue){};
+    void setVar(string VarName,int VarValue){};
+    void setVar(string VarName,float VarValue){};
+    void setVar(string VarName,bool VarValue){};
 };
+
 class time{};
 
 //此函数用strtok方法，
@@ -52,14 +107,15 @@ int main(){
                 break;
             };
         };
-    }else{
-        ifstream toFile;
-        toFile.open("in.ato",ios::in);
-        string getFile;
-        toFile >> getFile;
-        char* chartemp = (char*)getFile.c_str();
-        int inttemp = strlen(chartemp);
-        StringSplit(getFile,"\r",1);
-        toFile.close();
     };
+    // }else{
+    //     ifstream toFile;
+    //     toFile.open("in.ato",ios::in);
+    //     string getFile;
+    //     getline(toFile,getFile);
+    //     char* chartemp = (char*)getFile.c_str();
+    //     int inttemp = strlen(chartemp);
+    //     StringSplit(getFile,"\r",1);
+    //     toFile.close();
+    // };
 };
