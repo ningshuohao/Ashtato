@@ -62,7 +62,6 @@ class var{
         if (NowType == false){
             cout << "IndexERROR:The Variables is not index to get."
             return NULL;
-            
         };
     };
     void setVar(string VarName,string VarValue){};
@@ -107,7 +106,6 @@ int main(){
                 break;
             };
         };
-    };
     // }else{
     //     ifstream toFile;
     //     toFile.open("in.ato",ios::in);
@@ -117,5 +115,5 @@ int main(){
     //     int inttemp = strlen(chartemp);
     //     StringSplit(getFile,"\r",1);
     //     toFile.close();
-    // };
+    };
 };
