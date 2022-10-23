@@ -22,8 +22,9 @@ struct var{
 };
 
 struct time{
-    int getClick(){};
-    int getYear(){};
+    int getClick();
+    int getSecond();
+    int getYear();
 };
 
 //此函数用strtok方法，
