@@ -5,26 +5,15 @@
 #include <ctime>
 using namespace std;
 
-struct consle{
+namespace io{
     void out(const char* outStr){
         cout << outStr;
     };
-    void in(string VarName){
+    string in(){
         string inputStr;
         cin >> inputStr;
+        return inputStr;
     };
-};
-
-struct var{
-    public:
-    int VarNum = 0;
-    char* VarList[128];
-};
-
-struct time{
-    int getClick();
-    int getSecond();
-    int getYear();
 };
 
 //此函数用strtok方法，
