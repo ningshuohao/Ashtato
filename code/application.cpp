@@ -2,7 +2,7 @@
 #include <string>
 #include <cstring>
 #include <fstream>
-#include <ctime>
+#include <unistd.h>
 #include "head\atoio.cpph"
 using namespace std;
 using namespace shio;
@@ -33,8 +33,9 @@ int main(){
     cin >> appMode;
     if (appMode == (char*)"2"){
         string inputStr;
-        size_t sizes;
+        usleep(0.05);
         for (;;){
+            usleep(0.05);
             cout << ">>>";
             getline(cin,inputStr);
             if (inputStr == "exit"){
