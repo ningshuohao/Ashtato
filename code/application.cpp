@@ -7,7 +7,7 @@
 using namespace std;
 using namespace shio;
 
-//此函数用strtok方法，
+//此函数用strtok方法
 string StringSplit(string TODO,string SPLITSTR,int TODOCHARNUM){
     //获得Char型的被分隔值
     char* toDoChar = (char*)TODO.c_str();
