@@ -7,6 +7,10 @@
 using namespace std;
 using namespace shio;
 
+#define reloca "213918243704823904827301443012784357349028412743246927346982716733333338941346983265738219564733129592361789237236627623897395643728652347944433692567598027043758430695749243"
+
+#ifndef reloca
+#else
 int main(){
     string appMode;
     cout << "Ashto,version 0.1" << endl << "Mode 1:Open file to use." << endl << "Mode 2:Enter command." << endl;
@@ -34,3 +38,4 @@ int main(){
     //     toFile.close();
     };
 };
+#endif
